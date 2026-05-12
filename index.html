@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スマホ問題集 一覧</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 32px; padding: 24px 0 16px; border-bottom: 1px solid #e5e5e5; }
+  h1 { font-size: 1.6rem; font-weight: 600; letter-spacing: 0.02em; }
+  .subtitle { font-size: 0.9rem; color: #777; margin-top: 6px; }
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #444;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #222;
+    display: inline-block;
+  }
+  ul.list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; }
+  @media (min-width: 560px) { ul.list { grid-template-columns: 1fr 1fr; } }
+  ul.list li a {
+    display: block;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    color: #222;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  ul.list li a:hover { border-color: #222; transform: translateY(-1px); }
+  ul.list li a .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    color: #fff;
+    background: #555;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  ul.list li a .badge.second { background: #333; }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>スマホ問題集 一覧</h1>
+      <p class="subtitle">HS-1 / メカニック 過去問題集</p>
+    </header>
+
+    <section>
+      <h2>HS-1 一次試験</h2>
+      <ul class="list">
+        <li><a href="21年_HS1_1次.html">2021年 HS1 一次<span class="badge">1次</span></a></li>
+        <li><a href="22年_HS1_1次.html">2022年 HS1 一次<span class="badge">1次</span></a></li>
+        <li><a href="23年_HS1_1次.html">2023年 HS1 一次<span class="badge">1次</span></a></li>
+        <li><a href="24年_HS1_1次.html">2024年 HS1 一次<span class="badge">1次</span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>HS-1 二次試験</h2>
+      <ul class="list">
+        <li><a href="21年_HS1_2次.html">2021年 HS1 二次<span class="badge second">2次</span></a></li>
+        <li><a href="22年_HS1_2次.html">2022年 HS1 二次<span class="badge second">2次</span></a></li>
+        <li><a href="23年_HS1_2次.html">2023年 HS1 二次<span class="badge second">2次</span></a></li>
+        <li><a href="24年_HS1_2次.html">2024年 HS1 二次<span class="badge second">2次</span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2025年 HS-1</h2>
+      <ul class="list">
+        <li><a href="25年HS-1.html">2025年 HS-1 問題集</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>メカニック</h2>
+      <ul class="list">
+        <li><a href="2024年度.html">2024年度 メカニック</a></li>
+        <li><a href="2025年度.html">2025年度 メカニック</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; スマホ問題集</p>
+    </footer>
+  </div>
+</body>
+</html>
