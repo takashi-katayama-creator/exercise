@@ -8,105 +8,119 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
-    background: #fafafa;
-    color: #222;
-    line-height: 1.6;
-    padding: 24px 16px 64px;
+    background: #fafafa; color: #222; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center; padding: 24px;
   }
-  .container { max-width: 720px; margin: 0 auto; }
-  header { text-align: center; margin-bottom: 32px; padding: 24px 0 16px; border-bottom: 1px solid #e5e5e5; }
-  h1 { font-size: 1.6rem; font-weight: 600; letter-spacing: 0.02em; }
-  .subtitle { font-size: 0.9rem; color: #777; margin-top: 6px; }
-  section { margin-top: 32px; }
-  h2 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #444;
-    padding-bottom: 6px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #222;
-    display: inline-block;
+  .gate {
+    background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
+    padding: 32px 28px; width: 100%; max-width: 380px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  ul.list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; }
-  @media (min-width: 560px) { ul.list { grid-template-columns: 1fr 1fr; } }
-  ul.list li a {
-    display: block;
-    padding: 14px 16px;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    color: #222;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: border-color 0.15s, transform 0.15s;
+  .gate h1 { font-size: 1.15rem; margin-bottom: 6px; font-weight: 600; }
+  .gate p.sub { font-size: 0.85rem; color: #777; margin-bottom: 20px; }
+  .gate label { display: block; font-size: 0.85rem; margin-bottom: 6px; color: #444; }
+  .gate input[type="password"] {
+    width: 100%; padding: 10px 12px; font-size: 0.95rem;
+    border: 1px solid #ccc; border-radius: 6px; outline: none;
+    transition: border-color 0.15s;
   }
-  ul.list li a:hover { border-color: #222; transform: translateY(-1px); }
-  ul.list li a .badge {
-    display: inline-block;
-    font-size: 0.72rem;
-    color: #fff;
-    background: #555;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-left: 6px;
-    vertical-align: middle;
+  .gate input[type="password"]:focus { border-color: #222; }
+  .gate button {
+    width: 100%; margin-top: 14px; padding: 11px;
+    background: #222; color: #fff; border: 0; border-radius: 6px;
+    font-size: 0.95rem; cursor: pointer; transition: background 0.15s;
   }
-  ul.list li a .badge.second { background: #333; }
-  footer {
-    margin-top: 48px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #999;
-    padding-top: 16px;
-    border-top: 1px solid #e5e5e5;
-  }
+  .gate button:hover { background: #000; }
+  .gate button:disabled { background: #999; cursor: wait; }
+  .err { color: #c0392b; font-size: 0.85rem; margin-top: 10px; min-height: 1.2em; }
+  .loading { text-align: center; color: #888; font-size: 0.9rem; }
 </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>スマホ問題集 一覧</h1>
-      <p class="subtitle">HS-1 / メカニック 過去問題集</p>
-    </header>
-
-    <section>
-      <h2>HS-1 一次試験</h2>
-      <ul class="list">
-        <li><a href="21年_HS1_1次.html">2021年 HS1 一次<span class="badge">1次</span></a></li>
-        <li><a href="22年_HS1_1次.html">2022年 HS1 一次<span class="badge">1次</span></a></li>
-        <li><a href="23年_HS1_1次.html">2023年 HS1 一次<span class="badge">1次</span></a></li>
-        <li><a href="24年_HS1_1次.html">2024年 HS1 一次<span class="badge">1次</span></a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>HS-1 二次試験</h2>
-      <ul class="list">
-        <li><a href="21年_HS1_2次.html">2021年 HS1 二次<span class="badge second">2次</span></a></li>
-        <li><a href="22年_HS1_2次.html">2022年 HS1 二次<span class="badge second">2次</span></a></li>
-        <li><a href="23年_HS1_2次.html">2023年 HS1 二次<span class="badge second">2次</span></a></li>
-        <li><a href="24年_HS1_2次.html">2024年 HS1 二次<span class="badge second">2次</span></a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>2025年 HS-1</h2>
-      <ul class="list">
-        <li><a href="25年HS-1.html">2025年 HS-1 問題集</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>メカニック</h2>
-      <ul class="list">
-        <li><a href="2024年度.html">2024年度 メカニック</a></li>
-        <li><a href="2025年度.html">2025年度 メカニック</a></li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>&copy; スマホ問題集</p>
-    </footer>
+  <div class="gate" id="gate">
+    <h1>パスワードを入力</h1>
+    <p class="sub">スマホ問題集 一覧</p>
+    <form id="form" autocomplete="off">
+      <label for="pw">パスワード</label>
+      <input type="password" id="pw" autocomplete="current-password" autofocus required>
+      <button type="submit" id="btn">解錠</button>
+      <div class="err" id="err"></div>
+    </form>
   </div>
+
+<script id="payload" type="application/octet-stream">+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</script>
+<script>
+(async function() {
+  const PBKDF2_ITER = 200000;
+  const SALT_LEN = 16;
+  const IV_LEN = 12;
+  const STORAGE_KEY = "spw_v1";
+
+  const payload = document.getElementById("payload").textContent.trim();
+  const enc = Uint8Array.from(atob(payload), c => c.charCodeAt(0));
+  const salt = enc.slice(0, SALT_LEN);
+  const iv = enc.slice(SALT_LEN, SALT_LEN + IV_LEN);
+  const ct = enc.slice(SALT_LEN + IV_LEN);
+
+  async function deriveKey(pw) {
+    const keyMaterial = await crypto.subtle.importKey(
+      "raw", new TextEncoder().encode(pw),
+      "PBKDF2", false, ["deriveKey"]
+    );
+    return crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: salt, iterations: PBKDF2_ITER, hash: "SHA-256" },
+      keyMaterial,
+      { name: "AES-GCM", length: 256 },
+      false, ["decrypt"]
+    );
+  }
+
+  async function tryDecrypt(pw) {
+    try {
+      const key = await deriveKey(pw);
+      const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ct);
+      return new TextDecoder().decode(pt);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function showContent(html) {
+    try { sessionStorage.setItem(STORAGE_KEY, document.getElementById("pw").value || sessionStorage.getItem(STORAGE_KEY) || ""); } catch(e) {}
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  // Auto-unlock if password is in sessionStorage
+  try {
+    const saved = sessionStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const pt = await tryDecrypt(saved);
+      if (pt) { showContent(pt); return; }
+    }
+  } catch(e) {}
+
+  document.getElementById("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("btn");
+    const err = document.getElementById("err");
+    const pw = document.getElementById("pw").value;
+    err.textContent = "";
+    btn.disabled = true;
+    btn.textContent = "復号中…";
+    const pt = await tryDecrypt(pw);
+    if (pt) {
+      try { sessionStorage.setItem(STORAGE_KEY, pw); } catch(e) {}
+      showContent(pt);
+    } else {
+      err.textContent = "パスワードが違います";
+      btn.disabled = false;
+      btn.textContent = "解錠";
+      document.getElementById("pw").select();
+    }
+  });
+})();
+</script>
 </body>
 </html>
